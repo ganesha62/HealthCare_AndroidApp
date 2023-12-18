@@ -1,0 +1,107 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back1"
+    tools:context=".HealthArticleActivity">
+
+    <TextView
+        android:id="@+id/textViewHAtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="BMI CALCULATOR"
+        android:textColor="@color/yellowLight"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewHAName"
+        android:layout_width="255dp"
+        android:layout_height="65dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="12dp"
+        android:text="HEAL"
+        android:textColor="@color/purple_200"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <!-- BMI Calculator Content -->
+
+    <EditText
+        android:id="@+id/editTextWeight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Enter Weight (kg)"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHAName" />
+
+    <EditText
+        android:id="@+id/editTextHeight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Enter Height (m)"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextWeight" />
+
+    <Button
+        android:id="@+id/buttonCalculateBMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextHeight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Calculate BMI"
+        android:textColor="#FFFFFF"
+        android:background="?android:attr/selectableItemBackground"
+        app:layout_constraintTop_toBottomOf="@+id/editTextHeight" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonCalculateBMI"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalculateBMI" />
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/buttonHADBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="BACK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
